@@ -1,4 +1,4 @@
-# Nadhir Portfolio - React Project
+# Jisan Portfolio - React Project
 
 A modern, responsive portfolio website built with React, featuring smooth animations with Framer Motion and GSAP, styled with Tailwind CSS.
 
