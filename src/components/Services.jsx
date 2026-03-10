@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
+import { Laptop, Layers, Palette, Grid2x2 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,7 +34,7 @@ const Services = () => {
 
   const serviceCards = [
     {
-      icon: 'computer',
+      icon: Laptop,
       title: 'What I can do',
       description: 'I can help develop solutions that will help you grow your business:',
       items: [
@@ -45,7 +46,7 @@ const Services = () => {
       ]
     },
     {
-      icon: 'layers',
+      icon: Layers,
       title: 'Tools I Use',
       description: 'I use the latest tools and technologies to build functional and scalable products:',
       items: [
@@ -55,7 +56,7 @@ const Services = () => {
       ]
     },
     {
-      icon: 'palette',
+      icon: Palette,
       title: 'UI/UX Design',
       description: 'I am a designer first, developer second. I can help design clean and modern interfaces:',
       items: [
@@ -103,7 +104,7 @@ const Services = () => {
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <span className="material-symbols-outlined text-3xl">{card.icon}</span>
+                  <card.icon size={32} strokeWidth={1.5} />
                 </motion.div>
                 <h3 className="text-2xl font-bold">{card.title}</h3>
               </div>
@@ -156,7 +157,7 @@ const Services = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="material-symbols-outlined text-[20px] group-hover:text-primary transition-colors">grid_view</span>
+              <Grid2x2 size={20} className="group-hover:text-primary transition-colors" />
               View My Projects
             </motion.div>
           </Link>
